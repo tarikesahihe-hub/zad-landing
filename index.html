@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ZAD Mobile POS — تطبيق كاشير ونقطة بيع للمحلات التجارية</title>
+<meta name="description" content="ZAD Mobile POS هو تطبيق كاشير ونقطة بيع احترافي للمحلات التجارية يعمل بدون إنترنت، ويدعم قراءة الباركود وطباعة الفواتير وإدارة المخزون والمبيعات والتقارير. مناسب للبقالات والملابس والمطاعم في الجزائر وباقي الدول العربية.">
+<meta name="theme-color" content="#0f172a">
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;900&family=Tajawal:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Cairo', 'Tajawal', sans-serif;
+    background: #0f172a;
+    color: #e8ecf4;
+    line-height: 1.8;
+  }
+  .banner {
+    background: linear-gradient(135deg, #b8860b, #d4af37);
+    color: #1a1a1a;
+    text-align: center;
+    padding: 12px 16px;
+    font-weight: 700;
+    font-size: 0.95em;
+  }
+  header {
+    background: linear-gradient(135deg, #0d3b2e, #12293f);
+    padding: 50px 20px 40px;
+    text-align: center;
+    border-bottom: 3px solid #d4af37;
+  }
+  header h1 {
+    font-size: 1.9em;
+    color: #ffffff;
+    margin-bottom: 12px;
+  }
+  header p.share {
+    color: #9fb3d9;
+    font-size: 0.95em;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 30px 20px; }
+  .intro {
+    background: #151b2b;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    border: 1px solid #2a3550;
+  }
+  .code-box {
+    background: #1a2136;
+    border: 2px dashed #d4af37;
+    border-radius: 12px;
+    padding: 16px;
+    text-align: center;
+    margin: 20px 0;
+  }
+  .code-box .code {
+    font-size: 2.2em;
+    font-weight: 900;
+    color: #d4af37;
+    letter-spacing: 8px;
+  }
+  .cta {
+    display: block;
+    text-align: center;
+    background: linear-gradient(135deg, #1a5c46, #238a68);
+    color: #fff;
+    text-decoration: none;
+    padding: 18px 20px;
+    border-radius: 14px;
+    font-size: 1.15em;
+    font-weight: 700;
+    margin: 20px 0;
+    box-shadow: 0 6px 20px rgba(35,138,104,0.35);
+  }
+  .cta:active { transform: scale(0.98); }
+  .trial-badge {
+    text-align: center;
+    color: #6fcf97;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  .warn-box {
+    background: #2a2410;
+    border-right: 4px solid #d4af37;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 20px 0;
+    font-size: 0.95em;
+  }
+  section { margin: 34px 0; }
+  section h2 {
+    color: #d4af37;
+    font-size: 1.3em;
+    margin-bottom: 16px;
+    border-bottom: 2px solid #2a3550;
+    padding-bottom: 8px;
+  }
+  ul.features { list-style: none; }
+  ul.features li {
+    background: #151b2b;
+    border: 1px solid #2a3550;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin-bottom: 10px;
+  }
+  ul.features li strong { color: #6fcf97; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+  .chip {
+    background: #1a2136;
+    border: 1px solid #2a3550;
+    color: #9fb3d9;
+    padding: 8px 14px;
+    border-radius: 20px;
+    font-size: 0.9em;
+  }
+  ol.steps { padding-right: 20px; }
+  ol.steps li { margin-bottom: 14px; }
+  .pricing {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+  }
+  .price-card {
+    flex: 1;
+    min-width: 140px;
+    background: #151b2b;
+    border: 2px solid #2a3550;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+  }
+  .price-card .amount {
+    font-size: 1.8em;
+    font-weight: 900;
+    color: #d4af37;
+    margin: 10px 0;
+  }
+  .support-box {
+    background: linear-gradient(135deg, #128c7e, #25d366);
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 10px;
+  }
+  .support-box a {
+    color: #fff;
+    font-weight: 700;
+    font-size: 1.15em;
+    text-decoration: none;
+  }
+  footer {
+    text-align: center;
+    padding: 30px 20px;
+    color: #6a7590;
+    font-size: 0.85em;
+    border-top: 1px solid #2a3550;
+  }
+</style>
+</head>
+<body>
+
+<div class="banner">🔥 مفتاحين بسعر مفتاح واحد 🔐 للتجار فقط</div>
+
+<header>
+  <h1>ZAD Mobile POS — تطبيق كاشير ونقطة بيع احترافي للمحلات</h1>
+  <p class="share">📤 إذا لم تكن تاجر — شاركه مع تجار الحي</p>
+</header>
+
+<main>
+
+  <div class="intro">
+    <p>ما ستراه هنا ليس مجرد تطبيق آخر، بل طريقة مختلفة تماماً لتسيير تجارتك من هاتفك أو حاسوبك. ZAD Mobile POS هو نظام كاشير ونقطة بيع متكامل يعمل على أندرويد وWindows بدون الحاجة إلى اتصال بالإنترنت، صُمم ليغطي احتياجات البقالات والملابس والمطاعم والمقاهي ومحلات قطع الغيار والإلكترونيات في الجزائر وباقي الدول العربية.</p>
+  </div>
+
+  <p style="text-align:center; color:#9fb3d9;">قبل أن تدخل... استخدم رمز الدخول الخاص:</p>
+  <div class="code-box"><span class="code">1234</span></div>
+
+  <a class="cta" href="https://github.com/tarikesahihe-hub/zad-pos-releases/releases/latest/download/app-release.apk">
+    📥 تحميل التطبيق لأندرويد وادخل الرمز 1234
+  </a>
+  <a class="cta" style="background:linear-gradient(135deg,#1e3a5c,#2f6aa0);" href="https://github.com/tarikesahihe-hub/zad-pos-releases/releases/latest/download/zad-pos-windows.zip">
+    💻 تحميل نسخة Windows
+  </a>
+
+  <p class="trial-badge">🎁 48 ساعة تجربة مجانية بالكامل للنسخة الكاملة</p>
+
+  <div class="warn-box">
+    <strong>🛡️ لتجاوز تحذير التثبيت:</strong><br>
+    التطبيق خارج متجر Google Play، لذا يظهر هذا التحذير الاعتيادي. اضغط على "تفاصيل أكثر" ثم اختر "التثبيت على أي حال". التطبيق آمن ومضمون 100% 🌟🔒
+  </div>
+
+  <section>
+    <h2>💡 ماذا يقدم لك ZAD Mobile POS؟</h2>
+    <ul class="features">
+      <li><strong>عمل كامل بدون إنترنت:</strong> إدارة المبيعات والمخزون والفواتير محلياً على جهازك، مناسب للمحلات في المناطق ذات التغطية الضعيفة.</li>
+      <li><strong>💻 تطبيق Windows حقيقي:</strong> يعمل أيضاً كتطبيق سطح مكتب كامل على الحاسوب، بجانب نسخة الأندرويد.</li>
+      <li><strong>⚖️ البيع بالوزن:</strong> دعم كامل لبيع المنتجات بالكيلوغرام (فواكه جافة، حبوب، وغيرها).</li>
+      <li><strong>🏷️ تسعير 3 مستويات:</strong> تفصيل، نصف جملة، وجملة — لكل منتج على حدة.</li>
+      <li><strong>كاشير وسلة بيع ذكية:</strong> قراءة الباركود مباشرة بكاميرا الهاتف، وإنشاء سلة بيع احترافية مع حساب الخصومات تلقائياً.</li>
+      <li><strong>فواتير احترافية:</strong> طباعة فورية عبر البلوتوث، أو مشاركة الفاتورة عبر واتساب.</li>
+      <li><strong>🕌 حساب الزكاة الشرعي:</strong> أداة مدمجة لحساب زكاة عروض التجارة.</li>
+      <li><strong>تقارير شاملة:</strong> متابعة المبيعات اليومية والأرباح مع تنبيهات المخزون المنخفض.</li>
+      <li><strong>📖 دليل استخدام شامل:</strong> شرح مفصل داخل التطبيق بثلاث لغات (عربي، فرنسي، إنجليزي).</li>
+      <li><strong>تحديثات ودعم مجاني:</strong> رخصة مدى الحياة مع تحديثات مستمرة بدون أي مصاريف إضافية.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>🏪 مصمم لجميع الأنشطة التجارية</h2>
+    <div class="chips">
+      <span class="chip">البقالات والسوبرماركت</span>
+      <span class="chip">محلات الملابس والأحذية</span>
+      <span class="chip">الهواتف والإلكترونيات</span>
+      <span class="chip">قطع الغيار</span>
+      <span class="chip">مستحضرات التجميل</span>
+      <span class="chip">المطاعم والمقاهي</span>
+      <span class="chip">المخابز والحلويات</span>
+      <span class="chip">المكتبات</span>
+      <span class="chip">الخضر والفواكه</span>
+    </div>
+  </section>
+
+  <section>
+    <h2>🚀 كيفية البدء مع ZAD Mobile POS</h2>
+    <ol class="steps">
+      <li>اضغط على زر التحميل أعلاه لتثبيت ZAD Mobile POS على هاتفك أو حاسوبك.</li>
+      <li>افتح التطبيق وأدخل رمز الدخول <strong>1234</strong> لتفعيل النسخة الكاملة لمدة 48 ساعة تجريبية.</li>
+      <li>أضف منتجاتك ومخزونك وابدأ في تسجيل المبيعات وطباعة الفواتير فوراً بدون إنترنت.</li>
+      <li>بنهاية الـ48 ساعة التجريبية اختر رخصتك المناسبة لتفعيلها مدى الحياة. 🔥 مفتاحين بسعر مفتاح واحد!</li>
+    </ol>
+  </section>
+
+  <a class="cta" href="https://github.com/tarikesahihe-hub/zad-pos-releases/releases/latest/download/app-release.apk">
+    🚀 حمّل ZAD Mobile POS الآن (رمز الدخول: 1234)
+  </a>
+
+  <section>
+    <h2>💰 الأسعار — رخصة مدى الحياة</h2>
+    <p style="text-align:center; margin-bottom:16px; color:#9fb3d9;">عروض استثنائية للرخص مدى الحياة بدون أي اشتراكات شهرية أو سنوية 🔥 مفتاحين بسعر مفتاح واحد</p>
+    <div class="pricing">
+      <div class="price-card">
+        <div>🇩🇿 داخل الجزائر</div>
+        <div class="amount">3500 دج</div>
+        <div>🎁 48 ساعة تجربة مجانية</div>
+      </div>
+      <div class="price-card">
+        <div>🌍 باقي الدول</div>
+        <div class="amount">15$</div>
+        <div>🎁 48 ساعة تجربة مجانية</div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>📞 للدعم الفني</h2>
+    <div class="support-box">
+      <a href="https://wa.me/213670694322">📱 0670 69 43 22 — واتساب</a>
+      <p style="margin-top:8px; color:#eafff5;">متاح للرد على استفساراتكم وطلبات التفعيل</p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <strong>ZAD Mobile POS</strong> — بسيط في الاستخدام، قوي في التسيير، عالمي في الطموح.<br>
+  تطبيق كاشير ونقطة بيع لأندرويد وWindows — رخصة مدى الحياة بدون اشتراكات.<br>
+  © 2026 ZAD Mobile POS. جميع الحقوق محفوظة.
+</footer>
+
+</body>
+</html>
