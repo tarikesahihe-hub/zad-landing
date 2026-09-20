@@ -74,6 +74,53 @@
     box-shadow: 0 6px 20px rgba(35,138,104,0.35);
   }
   .cta:active { transform: scale(0.98); }
+  .countdown-box {
+    background: linear-gradient(135deg, #1a2136, #151b2b);
+    border: 2px solid #d4af37;
+    border-radius: 16px;
+    padding: 20px 10px;
+    text-align: center;
+    margin-bottom: 24px;
+    box-shadow: 0 6px 24px rgba(212,175,55,0.25);
+  }
+  .countdown-title {
+    color: #d4af37;
+    font-weight: 700;
+    font-size: 1.15em;
+    margin-bottom: 14px;
+  }
+  .countdown-timer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+  }
+  .countdown-unit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #0f172a;
+    border-radius: 10px;
+    padding: 10px 8px;
+    min-width: 58px;
+  }
+  .countdown-unit span {
+    font-size: 2.3em;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 1;
+    font-variant-numeric: tabular-nums;
+  }
+  .countdown-unit small {
+    color: #9fb3d9;
+    font-size: 0.72em;
+    margin-top: 4px;
+  }
+  .countdown-sep {
+    font-size: 2em;
+    font-weight: 900;
+    color: #d4af37;
+  }
   .trial-badge {
     text-align: center;
     color: #6fcf97;
@@ -178,6 +225,19 @@
 </header>
 
 <main>
+
+  <div class="countdown-box">
+    <div class="countdown-title">⏰ العرض ينتهي خلال</div>
+    <div class="countdown-timer" id="countdown">
+      <div class="countdown-unit"><span id="cd-days">00</span><small>يوم</small></div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-unit"><span id="cd-hours">00</span><small>ساعة</small></div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-unit"><span id="cd-minutes">00</span><small>دقيقة</small></div>
+      <div class="countdown-sep">:</div>
+      <div class="countdown-unit"><span id="cd-seconds">00</span><small>ثانية</small></div>
+    </div>
+  </div>
 
   <div class="intro">
     <p>ما ستراه هنا ليس مجرد تطبيق آخر، بل طريقة مختلفة تماماً لتسيير تجارتك من هاتفك أو حاسوبك. ZAD Mobile POS هو نظام كاشير ونقطة بيع متكامل يعمل على أندرويد وWindows بدون الحاجة إلى اتصال بالإنترنت، صُمم ليغطي احتياجات البقالات والملابس والمطاعم والمقاهي ومحلات قطع الغيار والإلكترونيات في الجزائر وباقي الدول العربية.</p>
@@ -293,5 +353,26 @@
   © 2026 ZAD Mobile POS. جميع الحقوق محفوظة.
 </footer>
 
+<script>
+  var countdownDate = new Date("2026-10-20T23:59:59+01:00").getTime();
+  var timerInterval = setInterval(function () {
+    var now = new Date().getTime();
+    var distance = countdownDate - now;
+    if (distance < 0) {
+      document.getElementById('countdown').innerHTML =
+        '<div style="font-size:1.3em;color:#d4af37;font-weight:700;">انتهى العرض</div>';
+      clearInterval(timerInterval);
+      return;
+    }
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+    document.getElementById('cd-days').textContent = String(days).padStart(2, '0');
+    document.getElementById('cd-hours').textContent = String(hours).padStart(2, '0');
+    document.getElementById('cd-minutes').textContent = String(minutes).padStart(2, '0');
+    document.getElementById('cd-seconds').textContent = String(seconds).padStart(2, '0');
+  }, 1000);
+</script>
 </body>
 </html>
