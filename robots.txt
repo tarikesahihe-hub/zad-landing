@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tarikesahihe-hub.github.io/zad-landing/sitemap.xml
