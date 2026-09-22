@@ -101,6 +101,14 @@
     box-shadow: 0 6px 20px rgba(35,138,104,0.35);
   }
   .cta:active { transform: scale(0.98); }
+  .blink-icon {
+    display: inline-block;
+    animation: blinkIcon 1.1s ease-in-out infinite;
+  }
+  @keyframes blinkIcon {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(1.15); }
+  }
   .countdown-box {
     background: linear-gradient(135deg, #1a2136, #151b2b);
     border: 2px solid #d4af37;
@@ -270,14 +278,11 @@
     <p>ما ستراه هنا ليس مجرد تطبيق آخر، بل طريقة مختلفة تماماً لتسيير تجارتك من هاتفك أو حاسوبك. ZAD Mobile POS هو نظام كاشير ونقطة بيع متكامل يعمل على أندرويد وWindows بدون الحاجة إلى اتصال بالإنترنت، صُمم ليغطي احتياجات البقالات والملابس والمطاعم والمقاهي ومحلات قطع الغيار والإلكترونيات في الجزائر وباقي الدول العربية.</p>
   </div>
 
-  <p style="text-align:center; color:#9fb3d9;">قبل أن تدخل... استخدم رمز الدخول الخاص:</p>
-  <div class="code-box"><span class="code">1234</span></div>
-
   <a class="cta" href="https://github.com/tarikesahihe-hub/zad-pos-releases/releases/latest/download/app-release.apk">
-    📥 تحميل التطبيق لأندرويد وادخل الرمز 1234
+    <span class="blink-icon">📥</span> تحميل التطبيق لأندرويد
   </a>
   <a class="cta" style="background:linear-gradient(135deg,#1e3a5c,#2f6aa0);" href="https://github.com/tarikesahihe-hub/zad-pos-releases/releases/latest/download/zad-pos-windows.zip">
-    💻 تحميل نسخة Windows
+    <span class="blink-icon">💻</span> تحميل نسخة Windows
   </a>
 
   <p class="trial-badge">🎁 48 ساعة تجربة مجانية بالكامل للنسخة الكاملة</p>
@@ -322,14 +327,14 @@
     <h2>🚀 كيفية البدء مع ZAD Mobile POS</h2>
     <ol class="steps">
       <li>اضغط على زر التحميل أعلاه لتثبيت ZAD Mobile POS على هاتفك أو حاسوبك.</li>
-      <li>افتح التطبيق وأدخل رمز الدخول <strong>1234</strong> لتفعيل النسخة الكاملة لمدة 48 ساعة تجريبية.</li>
+      <li>افتح التطبيق مباشرة — يبدأ العمل فوراً بلا أي رمز، مع تجربة كاملة لمدة 48 ساعة.</li>
       <li>أضف منتجاتك ومخزونك وابدأ في تسجيل المبيعات وطباعة الفواتير فوراً بدون إنترنت.</li>
       <li>بنهاية الـ48 ساعة التجريبية اختر رخصتك المناسبة لتفعيلها مدى الحياة. 🔥 خصم 50% لأول 100 زبون!</li>
     </ol>
   </section>
 
   <a class="cta" href="https://github.com/tarikesahihe-hub/zad-pos-releases/releases/latest/download/app-release.apk">
-    🚀 حمّل ZAD Mobile POS الآن (رمز الدخول: 1234)
+    <span class="blink-icon">🚀</span> حمّل ZAD Mobile POS الآن
   </a>
 
   <section>
