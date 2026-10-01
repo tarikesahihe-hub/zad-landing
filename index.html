@@ -553,7 +553,7 @@
   }, 1000);
 
   // === عدّل هذين الرقمين فقط بعد كل عملية بيع ===
-  var REMAINING = { android: 23, windows: 278 };
+  var REMAINING = { android: 0, windows: 0 };
   document.querySelectorAll('.remaining-count').forEach(function (el) {
     var platform = el.getAttribute('data-platform');
     el.textContent = REMAINING[platform] !== undefined ? REMAINING[platform] : '';
